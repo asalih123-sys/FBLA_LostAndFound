@@ -1,0 +1,395 @@
+/* ============================= */
+/* RESET & BODY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/*------------------------*/
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Firefox */
+html {
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+/*------------------------*/
+
+body {
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #ec7337, #f79800, #d36008);
+    color: #0C2340;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: rgb(253, 253, 253);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================= */
+/* HEADER / NAV */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    background: linear-gradient(to right, #ec7337, #f79800, #c71801);
+    height: 100px;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    display: flex;     
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;  
+    color: inherit;         
+    cursor: pointer;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.title {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.menu-link::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #043674;
+    transition: width 0.3s;
+}
+
+.menu-link:hover::after,
+.menu-link.active::after {
+    width: 100%;
+}
+
+/* ============================= */
+/* BURGER MENU */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 28px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* ============================= */
+/* MAIN REPORT FORM */
+.report {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 70%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+}
+
+.thead {
+    color: #00246C;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.mheader {
+    color: #f26f03;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.lheader {
+    color: #06264E;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Inputs & Selects */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+}
+
+/* Flex sections */
+.name-input,
+.campus-select,
+.program-select,
+.email-input,
+.phone-input,
+.date-found-input,
+.item-found-input,
+.found-item-img-input,
+.item-found-category {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+/* Campus map */
+.campusButton {
+    margin-top: 3px;
+    margin-bottom:15px;
+    padding: 10px 15px;
+    background: #ef8a3f;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+
+}
+
+.campusButton:hover {
+    background: #d77933;
+}
+
+.campus-map img {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#submit-button,
+#reset-button {
+    padding: 12px 0;
+    flex: 1;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+    background: #ef8a3f;
+}
+
+#submit-button:hover,
+#reset-button:hover {
+    background: #d77933;
+}
+
+
+/*footer*/
+.footer {
+    background: linear-gradient(
+        to right,
+        #0C2340,
+        #1f354f,
+        #0C2340
+    );
+    color: white;
+    padding: 60px 40px 20px;
+}
+
+/*footer*/
+.footer {
+    background: linear-gradient(
+        to right,
+        #0C2340,
+        #1f354f,
+        #0C2340
+    );
+    color: white;
+    padding: 60px 40px 20px;
+}
+
+/* Footer layout */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Section headings */
+.footer-section h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Text */
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.footer-section  a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-section  a:hover {
+    color: #ef8a3f;
+}
+
+/* Lists */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-section ul a:hover {
+    color: #ef8a3f;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 40px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #fffdfd;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-brand img {
+    width: 55px; 
+    height: auto;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    cursor: pointer;
+}
+
+.footer-brand img:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 4px 10px rgba(239, 138, 63, 0.6));
+}
+
+/* ============================= */
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+    .nav {
+        padding: 0 30px;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background: #ef8a3f;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 0;
+        display: none;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .report {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .title {
+        font-size: 20px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}

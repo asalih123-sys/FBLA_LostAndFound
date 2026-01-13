@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West-MEC Lost & Found</title>
+    <link rel="icon" type="image/png" href="images/Arrow.png">
+    <link rel="stylesheet" href="/CSS-Style-Sheets/index-style.css">
+    <script src="JavaScript-Files/home.js" defer></script>
+    <meta name="description" content="West-MEC Official Lost and Found Website - Find lost Items, Browse Lost Items, and Claim Lost Items!">
+</head>
+
+<body>
+
+<!-- header -->
+<header class="header">
+    <nav class="nav">
+        <a href="index.html" class="logo">
+            <img src="Images/West-MEC-logo.png" alt="West-MEC Logo">
+            <span class="title">West-MEC Lost & Found</span>
+        </a>
+
+        <!-- Burger -->
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html" class="menu-link active">Home</a></li>
+            <li><a href="report.html" class="menu-link">Report</a></li>
+            <li><a href="search.html" class="menu-link">Browse</a></li>
+            <li><a href="claim.html" class="menu-link">Claim</a></li>
+            <li><a href="adminlogin.html" class="menu-link">Admin</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- hero -->
+<section class="hero">
+    <img src="Images/Orange-Blob-Central.png" alt="West-MEC Central">
+
+    <div class="hero-box">
+        <h1>Find What Matters</h1>
+        <p>Report items, browse lost belongings, and get your stuff back.</p>
+    </div>
+
+    <div class="hero-buttons">
+        <a href="search.html" class="btn btn-main">Browse Items</a>
+        <a href="report.html" class="btn btn-dark">Report Item</a>
+    </div>
+</section>
+
+<hr>
+
+<!-- stats -->
+<section class="stats">
+    <div class="stat">
+        <h2 id="total-items">2</h2>
+        <p>Total Items</p>
+    </div>
+
+    <div class="stat">
+        <h2 id="items-claimed">1</h2>
+        <p>Items Claimed</p>
+    </div>
+
+    <div class="stat">
+        <h2 id="items-available">2</h2>
+        <p>Available Now</p>
+    </div>
+</section>
+
+<hr>
+
+<!-- mission -->
+<section class="mission">
+    <div class="mission-img">
+        <img src="Images/Westley-Point_2.png" alt="Westley">
+    </div>
+
+    <div class="mission-box">
+        <h2>Our Mission</h2>
+        <p>
+            We make it easy for students and staff to recover lost items through a safe, simple, and honest system. By connecting people with their missing belongings quickly and securely, we help turn stressful situations into positive outcomes so nothing important stays lost for long.
+        </p>
+    </div>
+</section>
+
+<hr>
+
+<!-- how it works -->
+<section class="how">
+    <h2>How It Works</h2>
+
+    <div class="how-list">
+        <div class="how-card">
+            <h3>Report</h3>
+            <p>Found something? Report it.</p>
+            <a href="report.html" class="btn btn-outline">Report</a>
+        </div>
+
+        <div class="how-card">
+            <h3>Browse</h3>
+            <p>Look through found items.</p>
+            <a href="search.html" class="btn btn-outline">Browse</a>
+        </div>
+
+        <div class="how-card">
+            <h3>Claim</h3>
+            <p>Verify ownership and get it back.</p>
+            <a href="claim.html" class="btn btn-outline">Claim</a>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<!-- contact -->
+<section class="contact">
+    <form class="form"
+          action="https://api.web3forms.com/submit"
+          method="POST">
+
+        <input type="hidden" name="access_key"
+               value="3ec01063-88a9-4401-b117-2b6676b555eb">
+
+        <h2 id="contact">Contact Us</h2>
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message"></textarea>
+
+        <button type="submit" class="btn btn-main" id="submit-btn">Submit</button>
+    </form>
+
+    <div class="contact-img">
+        <img src="Images/869b3f50-01ae-441b-975a-b37e1d0616c6-3.png" alt="Thank You">
+    </div>
+</section>
+
+</main>
+<hr class="seperation-line">
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Brand / Logo -->
+        <div class="footer-section footer-brand">
+            <a href="index.html" target="_blank" class="footer-brand-logo">
+                <img src="Images/Arrow.png" alt="West-MEC Website image">
+            </a>
+
+            <div class="footer-brand-text">
+                <h2>West-MEC Lost & Found</h2>
+                <p>Helping students and staff reconnect with their lost belongings.</p>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Browse Items</a></li>
+                <li><a href="report.html">Report Item</a></li>
+                <li><a href="claim.html">Claim Item</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <!-- Admin -->
+        <div class="footer-section">
+            <h3>Admin</h3>
+            <ul>
+                <li><a href="adminlogin.html">Admin Login</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: support@west-mec.org</p>
+            <p>West-MEC - Central Campus</p>
+            <a href="index.html#contact" class="footer-contact">Contact Us!</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 West-MEC Students — All Rights Reserved</p>
+    </div>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Page</title>
+    <link rel="stylesheet" href="/CSS-Style-Sheets/report-style.css">
+    <link rel="icon" type="image/png" href="images/Arrow.png">
+    <script src="JavaScript-Files/reportpage.js" defer></script>
+    <meta name="description" content="Report a lost item in the West-MEC Lost & Found system. Provide details about your lost belongings to help us assist you in recovering them.">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <nav class="nav">
+        <a href="index.html" class="logo">
+            <img src="Images/West-MEC-logo.png" alt="West-MEC Logo">
+            <span class="title">West-MEC Lost & Found</span>
+        </a>
+
+        <!-- Burger -->
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html" class="menu-link ">Home</a></li>
+            <li><a href="report.html" class="menu-link active">Report</a></li>
+            <li><a href="search.html" class="menu-link">Browse</a></li>
+            <li><a href="claim.html" class="menu-link">Claim</a></li>
+            <li><a href="adminlogin.html" class="menu-link">Admin</a></li>
+        </ul>
+    </nav>
+</header>
+<hr>
+<main>
+<div class="report" id="report">
+    <h1 class="thead">Report a Lost Item!</h1>
+    <p>Please input accurate information about the item you lost.</p>
+
+    <form>
+        <h2 class="mheader">Personal Information</h2>
+
+        <h3 class="lheader">Name</h3>
+        <div class="name-input">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="...">
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="...">
+        </div>
+
+        <h4 class="lheader">Campus</h4>
+        <div class="campus-select">
+            <label for="campus">Select Your Campus</label>
+            <select name="campus" id="campus">
+                <option value="Central-Campus">Central Campus</option>
+                <option value="Northeast-Campus">Northeast Campus</option>
+                <option value="Northwest-Campus">Northwest Campus</option>
+                <option value="Southwest-Campus">Southwest Campus</option>
+            </select>
+        </div>
+        <button type="button" onclick="getName()" class="campusButton">Get Campus Map</button>
+        <div id="showMap" class="campus-map"></div>
+
+        <h4 class="lheader">Program</h4>
+        <div class="program-select">
+            <label>Select Your Program</label>
+            <select>
+           <option value="blank">...</option>
+            <option value="Advanced Manufacturing">Advanced Manufacturing</option>
+            <option value="Aesthetics">Aesthetics</option>
+            <option value="Air Conditioning Technology">Air Conditioning Technology</option>
+            <option value="Artificial Intelligence">Artificial Intelligence</option>
+            <option value="Automation & Robotic Systems">Automation & Robotic Systems</option>
+            <option value="Automative Technology">Automative Technology</option>
+            <option value="Aviation Maintenance Technology">Aviation Maintenance Technology</option>
+            <option value="Clinical Data Coordinator">Clinical Data Coordinator</option>
+            <option value="Coding">Coding</option>
+            <option value="Collision Repair & Refinishing">Collision Repair & Refinishing</option>
+            <option value="Cosmetology">Cosmetology</option>
+            <option value="Culinary Arts">Culinary Arts</option>
+            <option value="Dental Assisting">Dental Assisting</option>
+            <option value="Early Childhood Education">Early Childhood Education</option>
+            <option value="Electrical Trade Specialty">Electrical Trade Specialty</option>
+            <option value="Emergency Medical Technology">Emergency Medical Technology</option>
+            <option value="Emergency Room Technology">Emergency Room Technology</option>
+            <option value="Energy & Manufacturing Systems">Energy & Manufacturing Systems</option>
+            <option value="Esports Event Production">Esports Event Production</option>
+            <option value="Fire Science">Fire Science</option>
+            <option value="General Construction Technology">General Construction Technology</option>
+            <option value="Hairstyling">Hairstyling</option>
+            <option value="It-Security">IT Security</option>
+            <option value="Law-public-safety">Law & Public Safety</option>
+            <option value="Medical-assisting">Medical Assisting</option>
+            <option value="medical-equipment-engineering">Medical Equipment Engineering</option>
+            <option value="medical-laboratory-science">Medical Laboratory Science</option>
+            <option value="medium-diesel-technology">Medium/Heavy Diesel Technology</option>
+            <option value="nursing-services">Nursing Services</option>
+            <option value="Paralegal">Paralegal</option>
+            <option value="pharmacy-science">Pharmacy Science</option>
+            <option value="phyiscal-therapy">Physical Therapy</option>
+            <option value="powersports-technology">Powersports Technology</option>
+            <option value="precision-machining">Precision Machining</option>
+            <option value="veterinary-science">Veterinary Science</option>
+            <option value="water-systems">Water Systems</option>
+            <option value="welding-technology">Welding Technology</option>
+            </select>
+        </div>
+
+        <h2 class="mheader">Contact Information</h2>
+        <div class="email-input">
+            <label>Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com">
+        </div>
+        <div class="phone-input">
+            <label>Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </div>
+
+        <h3 class="mheader">Item Info</h3>
+        <div class="date-found-input">
+            <label>Date Lost:</label>
+            <input type="date" id="datemin" name="datemin" min="2018-01-01">
+        </div>
+        <div class="item-found-input">
+            <label>Item:</label>
+             <input type="text" id="found" name="found" placeholder="...">
+        </div>
+        <div class="found-item-img-input">
+            <label>Image:</label>
+                <input type="file" id="myfile" name="myfile" accept="image/*"><br>
+                <img id="preview" width="200" src=" " alt="Preview of Uploaded Image">
+        </div>
+        <div class="item-found-category">
+            <label for="category">Category</label>
+            <select name="category" id="category">
+                <option value="Electronic">Electronics</option>
+                <option value="Bags">Bags & Backpacks</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Shoes">Shoes</option>
+                <option value="Keys">Keys & Keychains</option>
+                <option value="Supplies">Books & School Supplies</option>
+                <option value="Lunch">Water Bottles & Lunch Items</option>
+                <option value="Accesories">Accesories</option>
+                <option value="Wallet-ID">Wallets & ID Cards</option>
+                <option value="Headphones">Headphones</option>
+                <option value="Personal">Personal Items</option>
+                <option value="Equipment">Equipment</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="buttons">
+            <input id="submit-button" type="submit" value="Submit">
+            <input id="reset-button" type="reset" value="Reset">
+        </div>
+    </form>
+</div>
+</main>
+
+<hr>
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Brand / Logo -->
+        <div class="footer-section footer-brand">
+            <a href="index.html" target="_blank" class="footer-brand-logo">
+                <img src="Images/Arrow.png" alt="West-MEC Website image">
+            </a>
+
+            <div class="footer-brand-text">
+                <h2>West-MEC Lost & Found</h2>
+                <p>Helping students and staff reconnect with their lost belongings.</p>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Browse Items</a></li>
+                <li><a href="report.html">Report Item</a></li>
+                <li><a href="claim.html">Claim Item</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <!-- Admin -->
+        <div class="footer-section">
+            <h3>Admin</h3>
+            <ul>
+                <li><a href="adminlogin.html">Admin Login</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: support@west-mec.org</p>
+            <p>West-MEC - Central Campus</p>
+            <a href="index.html#contact" class="footer-contact">Contact Us!</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 West-MEC Students — All Rights Reserved</p>
+    </div>
+</footer>
+<script>
+function getName() {
+    var x = document.getElementById('campus');
+    var image = '';
+    if (x.value === 'CC') image = `<img src="Images/update-cc-map.jpg">`;
+    if (x.value === 'NEC') image = `<img src="Images/Northeast-Map.jpg">`;
+    if (x.value === 'NWC') image = `<img src="Images/Northwest-Campus-Map.jpg">`;
+    if (x.value === 'SWC') image = `<img src="Images/Southwest-Campus-Map.jpg">`;
+    document.getElementById('showMap').innerHTML = image;
+}
+</script>
+
+</body>
+</html>

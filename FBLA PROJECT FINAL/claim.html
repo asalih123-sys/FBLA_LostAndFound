@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Page</title>
+
+    <!-- Home Header Styles -->
+    <link rel="icon" type="image/png" href="images/Arrow.png">
+    <link rel="stylesheet" href="/CSS-Style-Sheets/claim-style.css">
+    <script src="JavaScript-Files/claim-script.js" defer></script>
+    <meta name="description" content="Claim an item in the West-MEC Lost & Found system. Provide your personal and contact information to retrieve your lost belongings.">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <nav class="nav">
+        <a href="index.html" class="logo">
+            <img src="Images/West-MEC-logo.png" alt="West-MEC Logo">
+            <span class="title">West-MEC Lost & Found</span>
+        </a>
+
+        <!-- Burger -->
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html" class="menu-link">Home</a></li>
+            <li><a href="report.html" class="menu-link">Report</a></li>
+            <li><a href="search.html" class="menu-link">Browse</a></li>
+            <li><a href="claim.html" class="menu-link active">Claim</a></li>
+            <li><a href="adminlogin.html" class="menu-link">Admin</a></li>
+        </ul>
+    </nav>
+</header>
+<hr>
+<main>
+
+<!-- Student/Staff Selector -->
+<div class="school-position">
+    <h2>Are you a Student or Staff?</h2>
+    <div class="btn-group">
+        <button type="button" onclick="studentClick()">Student</button>
+        <button type="button" onclick="staffClick()">Staff</button>
+    </div>
+    <p id="outputArea">...</p>
+</div>
+
+<!-- CLAIM FORM -->
+<div class="report">
+
+    <h1 class="thead">Claim an Item!</h1>
+    <p>Please input accurate information!</p>
+    <br>
+    <div class="item-select">
+    <label for="claimItem">Select Lost Item</label>
+    <select id="claimItem">
+        <option value="">Loading items...</option>
+    </select>
+    </div>
+
+    <form>
+        <h2 class="mheader">Personal Information</h2>
+
+        <h3 class="lheader">Name</h3>
+        <div class="name-input">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Ex. John" required>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Doe" required>
+        </div>
+
+        <h4 class="lheader">Campus</h4>
+        <div class="campus-select">
+            <label for="campus">Select Your Campus</label>
+            <select name="campus" id="campus">
+                <option value="CC">Central Campus</option>
+                <option value="NEC">Northeast Campus</option>
+                <option value="NWC">Northwest Campus</option>
+                <option value="SWC">Southwest Campus</option>
+            </select>
+        </div>
+
+        <button type="button" onclick="return getMapImage();" class="campusButton">Get Campus Map</button>
+        <div id="showMap" class="lheader">(On the map, click where you last had your item.)</div>
+
+        <h4 class="lheader">Program</h4>
+        <div class="program-select">
+            <label for="program">Select Your Program</label>
+            <select name="program" id="program">
+            <option value="blank">...</option>
+            <option value="Advanced Manufacturing">Advanced Manufacturing</option>
+            <option value="Aesthetics">Aesthetics</option>
+            <option value="Air Conditioning Technology">Air Conditioning Technology</option>
+            <option value="Artificial Intelligence">Artificial Intelligence</option>
+            <option value="Automation & Robotic Systems">Automation & Robotic Systems</option>
+            <option value="Automative Technology">Automative Technology</option>
+            <option value="Aviation Maintenance Technology">Aviation Maintenance Technology</option>
+            <option value="Clinical Data Coordinator">Clinical Data Coordinator</option>
+            <option value="Coding">Coding</option>
+            <option value="Collision Repair & Refinishing">Collision Repair & Refinishing</option>
+            <option value="Cosmetology">Cosmetology</option>
+            <option value="Culinary Arts">Culinary Arts</option>
+            <option value="Dental Assisting">Dental Assisting</option>
+            <option value="Early Childhood Education">Early Childhood Education</option>
+            <option value="Electrical Trade Specialty">Electrical Trade Specialty</option>
+            <option value="Emergency Medical Technology">Emergency Medical Technology</option>
+            <option value="Emergency Room Technology">Emergency Room Technology</option>
+            <option value="Energy & Manufacturing Systems">Energy & Manufacturing Systems</option>
+            <option value="Esports Event Production">Esports Event Production</option>
+            <option value="Fire Science">Fire Science</option>
+            <option value="General Construction Technology">General Construction Technology</option>
+            <option value="Hairstyling">Hairstyling</option>
+            <option value="It-Security">IT Security</option>
+            <option value="Law-public-safety">Law & Public Safety</option>
+            <option value="Medical-assisting">Medical Assisting</option>
+            <option value="medical-equipment-engineering">Medical Equipment Engineering</option>
+            <option value="medical-laboratory-science">Medical Laboratory Science</option>
+            <option value="medium-diesel-technology">Medium/Heavy Diesel Technology</option>
+            <option value="nursing-services">Nursing Services</option>
+            <option value="Paralegal">Paralegal</option>
+            <option value="pharmacy-science">Pharmacy Science</option>
+            <option value="phyiscal-therapy">Physical Therapy</option>
+            <option value="powersports-technology">Powersports Technology</option>
+            <option value="precision-machining">Precision Machining</option>
+            <option value="veterinary-science">Veterinary Science</option>
+            <option value="water-systems">Water Systems</option>
+            <option value="welding-technology">Welding Technology</option>
+                <!-- Keep all other program options as in original -->
+            </select>
+        </div>
+
+        <h2 class="mheader">Contact Information</h2>
+
+
+        <div class="email-input">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="id-input">
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" required>
+        </div>
+        <div class="phone-input">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+
+        <h2 class="mheader">Item Info</h2>
+        <div class="date-found-input">
+            <label for="datemin">Approx. Date Lost</label>
+            <input type="date" id="datemin" name="datemin" required>
+        </div>
+        <div class="item-found-input">
+            <label for="owner-lost">Proof Description</label>
+            <input type="text" id="owner-lost" name="owner-lost" required>
+        </div>
+
+        <div class="buttons">
+            <input id="submit-button" type="submit" value="Submit">
+            <input id="reset-button" type="reset" value="Reset">
+        </div>
+    </form>
+</div>
+
+<hr>
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Brand / Logo -->
+        <div class="footer-section footer-brand">
+            <a href="index.html" target="_blank" class="footer-brand-logo">
+                <img src="Images/Arrow.png" alt="West-MEC Website image">
+            </a>
+
+            <div class="footer-brand-text">
+                <h2>West-MEC Lost & Found</h2>
+                <p>Helping students and staff reconnect with their lost belongings.</p>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Browse Items</a></li>
+                <li><a href="report.html">Report Item</a></li>
+                <li><a href="claim.html">Claim Item</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <!-- Admin -->
+        <div class="footer-section">
+            <h3>Admin</h3>
+            <ul>
+                <li><a href="adminlogin.html">Admin Login</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: support@west-mec.org</p>
+            <p>West-MEC - Central Campus</p>
+            <a href="index.html#contact" class="footer-contact">Contact Us!</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 West-MEC Students — All Rights Reserved</p>
+    </div>
+</footer>
+<script>
+function getMapImage() {
+    const campus = document.getElementById('campus').value;
+    document.getElementById('CC-Map').style.display = campus === 'CC' ? 'block' : 'none';
+    document.getElementById('NE-Map').style.display = campus === 'NEC' ? 'block' : 'none';
+    document.getElementById('NW-Map').style.display = campus === 'NWC' ? 'block' : 'none';
+    document.getElementById('SW-Map').style.display = campus === 'SWC' ? 'block' : 'none';
+}
+</script>
+
+</main>
+</body>
+</html>
