@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.losttext.toLowerCase().includes(searchText) ||
                 item.fname.toLowerCase().includes(searchText) ||
                 item.lname.toLowerCase().includes(searchText);
+                const statusMatch = item.status === "approved";
             return categoryMatch && searchMatch;
         });
 
@@ -130,4 +131,5 @@ document.addEventListener("DOMContentLoaded", () => {
     loadItems();
 
 });
+
 
