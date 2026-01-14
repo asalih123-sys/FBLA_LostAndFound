@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ----- Claim function -----
     function claimItem(info) {
-        alert("You have claimed the item : " + info);
+        alert("You will now be redirected to claim your Item!");
         window.location.href = "claim.html";
     }
 
@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadItems();
 
 });
+
 
 
 
