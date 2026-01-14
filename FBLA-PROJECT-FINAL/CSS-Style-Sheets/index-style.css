@@ -338,6 +338,12 @@ hr {
     border-radius: 24px;
 }
 
+label
+{
+   color:white;
+}
+
+
 
 
 /*footer*/
@@ -508,3 +514,4 @@ hr {
         flex-direction: column;
     }
 }
+
