@@ -130,9 +130,15 @@
              <input type="text" id="found" name="found" placeholder="...">
         </div>
         <div class="found-item-img-input">
-            <label>Image:</label>
-                <input type="file" id="myfile" name="myfile" accept="image/*"><br>
-                <img id="preview" width="200" src=" " alt="Preview of Uploaded Image">
+        <label for="myfile">Upload Image</label>
+        <input 
+            type="file" 
+            id="myfile"
+            name="myfile"
+            accept="image/png, image/jpeg, image/jpg, image/webp"
+        >
+        <img id="imagePreview" src="" alt="Preview" style="display:none; max-width:200px; margin-top:10px; border-radius:8px;">
+        <p id="imageError" style="color:red; font-size:14px;"></p>
         </div>
         <div class="item-found-category">
             <label for="category">Category</label>
@@ -227,4 +233,5 @@ function getName() {
 
 </body>
 </html>
+
 
