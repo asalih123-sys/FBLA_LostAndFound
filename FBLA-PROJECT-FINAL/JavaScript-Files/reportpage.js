@@ -3,11 +3,10 @@
 // Handles submitting lost items to localStorage
 // ==============================
 
-// Grab the form element
 const form = document.getElementById("report");
 const fileInput = document.getElementById("myfile");
-const imagePreview = document.getElementById("imagePreview"); 
-const imageError = document.getElementById("imageError");     
+const imagePreview = document.getElementById("imagePreview");
+const imageError = document.getElementById("imageError");
 
 let imageBase64 = "";
 
@@ -52,15 +51,9 @@ fileInput.addEventListener("change", function () {
 form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // -----------------------------
-    // Get existing reports from localStorage
-    // -----------------------------
     let storedReports = JSON.parse(localStorage.getItem("reportData")) || [];
     if (!Array.isArray(storedReports)) storedReports = [storedReports];
 
-    // -----------------------------
-    // Create new report object
-    // -----------------------------
     const data = {
         id: Date.now().toString(),
         fname: document.getElementById("fname").value,
@@ -70,33 +63,36 @@ form.addEventListener("submit", function (e) {
         phone: document.getElementById("phone").value,
         datefound: document.getElementById("datemin").value,
         losttext: document.getElementById("found").value,
-        image: imageBase64,         // already validated
+        image: imageBase64,
         category: document.getElementById("category").value,
-        status: "pending"           // default
+        status: "pending"
     };
 
-    // Add the new report
     storedReports.push(data);
-
-    // Save back to localStorage
     localStorage.setItem("reportData", JSON.stringify(storedReports));
 
-    
     imagePreview.style.display = "none";
     imageBase64 = "";
+    form.reset();
 
     alert("Item saved successfully! Please wait for admin review.");
 });
 
+// ==============================
+// Campus Map Preview
+// ==============================
 function getName() {
-    var x = document.getElementById('campus');
-    var image = '';
+    const x = document.getElementById('campus');
+    let image = '';
+
     if (x.value === 'Central-Campus') image = `<img src="Images/update-cc-map.jpg">`;
     if (x.value === 'Northeast-Campus') image = `<img src="Images/Northeast-Map.jpg">`;
     if (x.value === 'Northwest-Campus') image = `<img src="Images/Northwest-Campus-Map.jpg">`;
     if (x.value === 'Southwest-Campus') image = `<img src="Images/Southwest-Campus-Map.jpg">`;
+
     document.getElementById('showMap').innerHTML = image;
-};
+}
+
 // ==============================
 // Burger Menu
 // ==============================
@@ -106,6 +102,3 @@ const menu = document.querySelector(".menu");
 burger.addEventListener("click", () => {
     menu.classList.toggle("show");
 });
-
-
-
