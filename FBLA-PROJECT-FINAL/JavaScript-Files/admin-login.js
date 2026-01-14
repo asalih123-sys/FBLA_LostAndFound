@@ -42,7 +42,7 @@ form.addEventListener("submit", async function(e) {
     if (user) {
         alert("Login successful!");
         // Redirect to Dashboard
-        window.location.href = "/FBLA-PROJECT-FINAL/dash.html";
+        window.location.href = "dash.html";
     } else {
         alert("Invalid username or password.");
     }
@@ -50,3 +50,4 @@ form.addEventListener("submit", async function(e) {
 
     
 });
+
