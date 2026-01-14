@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ----- Claim function -----
     function claimItem(info) {
         alert("You have claimed the item : " + info);
-        window.location.href = "/FBLA-PROJECT-FINAL/claim.html";
+        window.location.href = "claim.html";
     }
 
     // ----- Filter function -----
@@ -130,3 +130,4 @@ document.addEventListener("DOMContentLoaded", () => {
     loadItems();
 
 });
+
