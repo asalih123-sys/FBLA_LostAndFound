@@ -67,8 +67,8 @@
 
         <h4 class="lheader">Program</h4>
         <div class="program-select">
-            <label>Select Your Program</label>
-            <select>
+            <label for="program">Select Your Program</label>
+            <select id="program">
            <option value="blank">...</option>
             <option value="Advanced Manufacturing">Advanced Manufacturing</option>
             <option value="Aesthetics">Aesthetics</option>
@@ -112,21 +112,21 @@
 
         <h2 class="mheader">Contact Information</h2>
         <div class="email-input">
-            <label>Email:</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
         </div>
         <div class="phone-input">
-            <label>Phone Number:</label>
+            <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
         </div>
 
         <h3 class="mheader">Item Info</h3>
         <div class="date-found-input">
-            <label>Date Lost:</label>
+            <label for="datemin">Date Lost:</label>
             <input type="date" id="datemin" name="datemin" min="2018-01-01" required>
         </div>
         <div class="item-found-input">
-            <label>Item:</label>
+            <label for="found">Item:</label>
              <input type="text" id="found" name="found" placeholder="..." required>
         </div>
         <div class="found-item-img-input">
@@ -220,6 +220,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
