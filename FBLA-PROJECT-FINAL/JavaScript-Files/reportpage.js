@@ -88,6 +88,15 @@ form.addEventListener("submit", function (e) {
     alert("Item saved successfully! Please wait for admin review.");
 });
 
+function getName() {
+    var x = document.getElementById('campus');
+    var image = '';
+    if (x.value === 'Central-Campus') image = `<img src="Images/update-cc-map.jpg">`;
+    if (x.value === 'Northeast-Campus') image = `<img src="Images/Northeast-Map.jpg">`;
+    if (x.value === 'Northwest-Campus') image = `<img src="Images/Northwest-Campus-Map.jpg">`;
+    if (x.value === 'Southwest-Campus') image = `<img src="Images/Southwest-Campus-Map.jpg">`;
+    document.getElementById('showMap').innerHTML = image;
+
 // ==============================
 // Burger Menu
 // ==============================
@@ -97,4 +106,5 @@ const menu = document.querySelector(".menu");
 burger.addEventListener("click", () => {
     menu.classList.toggle("show");
 });
+
 
