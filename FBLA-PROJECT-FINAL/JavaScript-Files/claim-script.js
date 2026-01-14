@@ -113,7 +113,7 @@ function getMapImage() {
     var mapHTML = '';
    
     if(selectedValue === 'CC') {
-        mapHTML = `<img src="images/update-cc-map.jpg" alt="central campus map" usemap="#CCMap">
+        mapHTML = `<img src="Images/update-cc-map.jpg" alt="central campus map" usemap="#CCMap">
                    <map name="CCMap">
                        <area shape="rect" coords="54,52,303,160" alt="Building A" onclick="getName('Building A'); return false;">
                        <area shape="rect" coords="319,45,456,183" alt="Building B" onclick="getName('Building B'); return false;">
@@ -122,7 +122,7 @@ function getMapImage() {
                    </map>`;    
     }
     else if(selectedValue === 'NEC') {
-        mapHTML = `<img src="images/Northeast-Map.jpg" alt="North East Map" usemap="#NECMap">
+        mapHTML = `<img src="Images/Northeast-Map.jpg" alt="North East Map" usemap="#NECMap">
                    <map name="NECMap">
                        <area shape="rect" coords="335,14,447,185" alt="Building A" onclick="getName('Building A'); return false;">
                        <area shape="rect" coords="400,192,447,289" alt="Building B" onclick="getName('Building B'); return false;">
@@ -132,7 +132,7 @@ function getMapImage() {
                    </map>`;
     }
     else if(selectedValue === 'NWC') {
-        mapHTML = `<img src="images/Northwest-Campus-Map.jpg" alt="North West Map" usemap="#NWCMap">
+        mapHTML = `<img src="Images/Northwest-Campus-Map.jpg" alt="North West Map" usemap="#NWCMap">
                    <map name="NWCMap">
                        <area shape="rect" coords="328,43,422,92" alt="Building A" onclick="getName('Building A'); return false;">
                        <area shape="rect" coords="445,45,511,93" alt="Building B" onclick="getName('Building B'); return false;">
@@ -145,7 +145,7 @@ function getMapImage() {
                    </map>`;
     }
     else if(selectedValue === 'SWC') {
-        mapHTML = `<img src="images/Southwest-Campus-Map.jpg" alt="South west Map" usemap="#SWCMap">
+        mapHTML = `<img src="Images/Southwest-Campus-Map.jpg" alt="South west Map" usemap="#SWCMap">
                    <map name="SWCMap">
                        <area shape="rect" coords="261,94,293,137" alt="Building A" onclick="getName('Building A'); return false;">
                        <area shape="rect" coords="147,98,255,152" alt="Building B" onclick="getName('Building B'); return false;">
@@ -166,4 +166,5 @@ function getMapImage() {
     return false;
 }
 // End of campus map clickable
+
 
