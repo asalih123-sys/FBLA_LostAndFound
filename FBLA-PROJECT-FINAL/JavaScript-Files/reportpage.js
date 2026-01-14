@@ -73,7 +73,6 @@ form.addEventListener("submit", function (e) {
 
     imagePreview.style.display = "none";
     imageBase64 = "";
-    form.reset();
 
     alert("Item saved successfully! Please wait for admin review.");
 });
@@ -102,3 +101,4 @@ const menu = document.querySelector(".menu");
 burger.addEventListener("click", () => {
     menu.classList.toggle("show");
 });
+
