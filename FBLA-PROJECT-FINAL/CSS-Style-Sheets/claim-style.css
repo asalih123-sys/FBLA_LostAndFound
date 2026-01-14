@@ -16,6 +16,8 @@
 /* Firefox */
 html {
     scrollbar-width: none;
+    scroll-behavior: smooth;
+
 }
 /*------------------------*/
 
@@ -441,3 +443,4 @@ textarea {
         flex-direction: column;
     }
 }
+
