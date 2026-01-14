@@ -13,6 +13,11 @@
     min-height: 100vh;
 }
 
+html
+{
+  scroll-behavior: smooth;
+}
+
 /* ================= IMAGES ================= */
 img {
     max-width: 100%;
@@ -420,4 +425,5 @@ hr {
 
 .Table img {
     border-radius: 6px; /* small rounding for images */
+
 }
