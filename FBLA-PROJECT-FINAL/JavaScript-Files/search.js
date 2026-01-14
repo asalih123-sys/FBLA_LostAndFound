@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.fname.toLowerCase().includes(searchText) ||
                 item.lname.toLowerCase().includes(searchText);
                 const statusMatch = item.status === "approved";
-            return categoryMatch && searchMatch;
+            return categoryMatch && searchMatch && statusMatch;
         });
 
         if (filteredItems.length === 0) {
@@ -131,5 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
     loadItems();
 
 });
+
 
 
