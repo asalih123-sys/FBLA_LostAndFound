@@ -338,7 +338,7 @@ hr {
     border-radius: 24px;
 }
 
-label
+.form label
 {
    color:white;
 }
@@ -514,4 +514,5 @@ label
         flex-direction: column;
     }
 }
+
 
