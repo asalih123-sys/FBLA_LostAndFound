@@ -81,8 +81,7 @@ form.addEventListener("submit", function (e) {
     // Save back to localStorage
     localStorage.setItem("reportData", JSON.stringify(storedReports));
 
-    // Reset form and image preview
-    form.reset();
+    
     imagePreview.style.display = "none";
     imageBase64 = "";
 
@@ -98,3 +97,4 @@ const menu = document.querySelector(".menu");
 burger.addEventListener("click", () => {
     menu.classList.toggle("show");
 });
+
