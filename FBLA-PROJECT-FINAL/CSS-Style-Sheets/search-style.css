@@ -16,6 +16,7 @@
 /* Firefox */
 html {
     scrollbar-width: none;
+    scroll-behavior:smooth;
 }
 /*------------------------*/
 
@@ -474,3 +475,4 @@ hr {
         padding: 1.5rem;
     }
 }
+
