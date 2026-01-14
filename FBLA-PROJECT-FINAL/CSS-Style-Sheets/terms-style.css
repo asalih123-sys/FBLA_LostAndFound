@@ -15,6 +15,7 @@
 /* Firefox */
 html {
     scrollbar-width: none;
+    scroll-behavior:smooth;
 }
 /*------------------------*/
 
@@ -316,3 +317,4 @@ ul {
     font-size: 18px;
   }
 }
+
