@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="/FBLA-PROJECT-FINAL/CSS-Style-Sheets/adminlogin-style.css">
+  <link rel="icon" type="image/png" href="/FBLA-PROJECT-FINAL/Images/Arrow.png">
+  <script src="/FBLA-PROJECT-FINAL/JavaScript-Files/admin-login.js" defer></script>
+  <meta name="description" content="Admin login page for West-MEC Lost & Found system. Secure access for administrators to manage lost and found items.">
+</head>
+
+<body>
+<header class="header">
+    <nav class="nav">
+        <a href="../index.html" class="logo">
+            <img src="/FBLA-PROJECT-FINAL/Images/West-MEC-logo.png" alt="West-MEC Logo">
+            <span class="title">West-MEC Lost & Found</span>
+        </a>
+
+        <!-- Burger -->
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="menu">
+            <li><a href="../index.html" class="menu-link">Home</a></li>
+            <li><a href="/FBLA-PROJECT-FINAL/report.html" class="menu-link">Report</a></li>
+            <li><a href="/FBLA-PROJECT-FINAL/search.html" class="menu-link">Browse</a></li>
+            <li><a href="/FBLA-PROJECT-FINAL/claim.html" class="menu-link">Claim</a></li>
+            <li><a href="/FBLA-PROJECT-FINAL/adminlogin.html" class="menu-link active">Admin</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <div class="content">
+    <form class="admin-login" id="admin-form" action="/login" method="POST">
+      <h1>Admin Login</h1>
+
+      <label for="user">Username</label>
+      <input id="user" name="username" type="text" autocomplete="username" required>
+
+      <label for="pass">Password</label>
+      <input id="pass" name="password" type="password" autocomplete="current-password" required>
+
+      <button type="submit">Login</button>
+
+      <p class="demo-text">Demo: USER / PASS</p>
+
+      <div class="signup-link">Don’t have an account? <a href="signup.html">Sign up here</a></div>
+    </form>
+  </div>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Brand / Logo -->
+        <div class="footer-section footer-brand">
+            <a href="../index.html" target="_blank" class="footer-brand-logo">
+                <img src="/FBLA-PROJECT-FINAL/Images/Arrow.png" alt="West-MEC Website image">
+            </a>
+
+            <div class="footer-brand-text">
+                <h2>West-MEC Lost & Found</h2>
+                <p>Helping students and staff reconnect with their lost belongings.</p>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="/FBLA-PROJECT-FINAL/search.html">Browse Items</a></li>
+                <li><a href="/FBLA-PROJECT-FINAL/report.html">Report Item</a></li>
+                <li><a href="/FBLA-PROJECT-FINAL/claim.html">Claim Item</a></li>
+                <li><a href="/FBLA-PROJECT-FINAL/terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <!-- Admin -->
+        <div class="footer-section">
+            <h3>Admin</h3>
+            <ul>
+                <li><a href="/FBLA-PROJECT-FINAL/adminlogin.html">Admin Login</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: support@west-mec.org</p>
+            <p>West-MEC - Central Campus</p>
+            <a href="../index.html#contact" class="footer-contact">Contact Us!</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 West-MEC Students — All Rights Reserved</p>
+    </div>
+</footer>
+</body>
+</html>
